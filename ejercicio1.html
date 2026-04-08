@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+    <section>
+        <button id="btn">Clic</button>
+        <p id="resultado"></p>
+    </section>
+
+    <script>
+        const boton = document.getElementById("btn")
+        const parrafo = document.getElementById("resultado")
+
+        boton.addEventListener("click", function () {
+            parrafo.innerHTML = "Hola clase"
+        })
+    </script>
+</body>
+
+</html>

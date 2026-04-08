@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+
+<body>
+    <section>
+        <input type="text" id="nombre">
+        <button id="btn">Clic</button>
+        <p id="resultado"></p>
+    </section>
+
+    <script>
+        const boton = document.getElementById("btn")
+        const resultado = document.getElementById("resultado")
+
+        boton.addEventListener("click", function () {
+            const input = document.getElementById("nombre")
+            resultado.innerHTML = "Hola, " + input.value
+        })
+    </script>
+</body>
+
+</html>

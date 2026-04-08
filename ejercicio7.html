@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+
+<body>
+    <section>
+        <p id="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere quas iste cum quos ad adipisci
+            assumenda
+            nihil porro velit molestias? Ea non recusandae, quaerat facere deleniti animi repellendus itaque minus.</p>
+        <button id="btn">Ocultar</button>
+    </section>
+
+    <script>
+        const boton = document.getElementById("btn")
+        const parrafo = document.getElementById("texto")
+
+        let visible = true
+
+        boton.addEventListener("click", function () {
+
+            if (visible) {
+                parrafo.style.display = "none"
+                boton.innerHTML = "Mostrar"
+                visible = false
+            } else {
+                parrafo.style.display = "block"
+                boton.innerHTML = "Ocultar"
+                visible = true
+            }
+        })
+    </script>
+</body>
+
+</html>
