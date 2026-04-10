@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .circulo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: gray;
+            margin: 10px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <section>
+            <div id="rojo" class="circulo"></div>
+            <div id="naranja" class="circulo"></div>
+            <div id="verde" class="circulo"></div>
+
+            <button id="btn">Siguiente</button>
+            <p id="resultado">Stop</p>
+        </section>
+
+        <script>
+            const estados = ["rojo", "naranja", "verde"];
+            const textos = ["Stop", "Atención", "Adelante"];
+
+            let estado = 0;
+
+            const boton = document.getElementById("btn");
+            const resultado = document.getElementById("resultado");
+
+            boton.addEventListener("click", function () {
+                estado = (estado + 1) % 3;
+
+                document.getElementById("rojo").style.backgroundColor = "gray";
+                document.getElementById("naranja").style.backgroundColor = "gray";
+                document.getElementById("verde").style.backgroundColor = "gray";
+
+                if (estado == 0) {
+                    document.getElementById("rojo").style.backgroundColor = "red";
+                }
+
+                if (estado == 1) {
+                    document.getElementById("naranja").style.backgroundColor = "orange";
+                }
+
+                if (estado == 2) {
+                    document.getElementById("verde").style.backgroundColor = "green";
+                }
+
+                resultado.innerHTML = textos[estado];
+            });
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <input id="tarea" type="text">
+        <button id="btn">Añadir</button>
+        <ul id="lista"></ul>
+    </section>
+
+    <script>
+        const boton = document.getElementById("btn");
+        const input = document.getElementById("tarea");
+        const lista = document.getElementById("lista");
+
+        boton.addEventListener("click", function () {
+            const texto = input.value;
+            lista.innerHTML = lista.innerHTML + "<li>" + texto + "</li>";
+            input.value = "";
+        });
+    </script>
+</body>
+
+</html>
