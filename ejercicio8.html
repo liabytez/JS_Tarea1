@@ -9,18 +9,17 @@
 
 <body>
     <section>
-        <img src="" alt="foto random" id="foto">
+        <img src="https://picsum.photos/200/150?random=1" alt="foto random" id="foto">
         <button id="btn">Random</button>
     </section>
 
     <script>
-        const boton = document.getElementById("btn")
-        const img = document.getElementById("foto")
-        img.src = "https://picsum.photos/200/150?random=2"
-        
-        boton.addEventListener("click", function () {
+     const boton = document.getElementById("btn")
+    const img = document.getElementById("foto")
 
-        })
+    boton.addEventListener("click", function() {
+        img.src = "https://picsum.photos/200/150?random=" + Math.random()
+    })
     </script>
 </body>
 
